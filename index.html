@@ -19,6 +19,21 @@
             margin: 0;
             padding: 0;
         }
+        .consultoria-image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 16px;
+        }
+        .consultoria-image img {
+        max-width: 860px;
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(62,35,75,0.12);
+        }
         
         /* FAQ Accordion Animations */
         .faq-answer {
@@ -207,32 +222,36 @@
                     <h2 class="text-[#363535] text-lg sm:text-xl lg:text-2xl font-medium mb-2">Envie seu contato e retornaremos em breve</h2>
                     <p class="text-[#5e5d5d] text-xs sm:text-sm">Nossos profissionais oferecem uma ampla área de atuação no direito</p>
                 </div>
-                <form class="space-y-3">
+                <form action="https://formsubmit.co/jva.magalhaes@gmail.com" method="POST" class="space-y-3">
+                    
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://seu-site.com/obrigado.html">
+
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-[#141c25] mb-2">Nome completo</label>
-                        <input type="text" class="w-full px-3 py-2 border border-[#c1c0c0] rounded-lg text-sm sm:text-base" placeholder=" ">
+                        <input type="text" name="name" required class="w-full px-3 py-2 border border-[#c1c0c0] rounded-lg text-sm sm:text-base" placeholder=" ">
                     </div>
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-[#141c25] mb-2">E-mail</label>
-                        <input type="email" class="w-full px-3 py-2 border border-[#c1c0c0] rounded-lg text-sm sm:text-base" placeholder=" ">
+                        <input type="email" name="email" required class="w-full px-3 py-2 border border-[#c1c0c0] rounded-lg text-sm sm:text-base" placeholder=" ">
                     </div>
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-[#141c25] mb-2">Whatsapp</label>
-                        <input type="tel" class="w-full px-3 py-2 border border-[#c1c0c0] rounded-lg text-sm sm:text-base" placeholder=" ">
+                        <input type="tel" name="whatsapp" class="w-full px-3 py-2 border border-[#c1c0c0] rounded-lg text-sm sm:text-base" placeholder=" ">
                     </div>
                     <div class="pt-4">
                         <button type="submit" class="w-full bg-[#2f1a38] text-[#ece9ed] py-2.5 px-5 rounded-lg font-medium text-xs sm:text-sm">
                             Enviar
                         </button>
                         <div class="flex items-start gap-2 mt-3">
-                            <input type="checkbox" id="privacy" class="mt-1 w-4 h-4 sm:w-5 sm:h-5 border-[#c1c0c0] border-[1.5px] rounded flex-shrink-0">
+                            <input type="checkbox" id="privacy" required class="mt-1 w-4 h-4 sm:w-5 sm:h-5 border-[#c1c0c0] border-[1.5px] rounded flex-shrink-0">
                             <label for="privacy" class="text-[10px] sm:text-xs text-[#5e5d5d]">
                                 Li e concordo com a Política de Privacidade e autorizo o tratamento dos meus dados pessoais para as finalidades informadas.
                             </label>
                         </div>
                     </div>
                 </form>
-            </div>
+</div>
         </div>
     </section>
 
@@ -360,6 +379,9 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="consultoria-image">
+                <img src="assets/1fea2e0bcebbae05a2f4dbcefd686d59cae50e3a.png" alt="Consultoria jurídica" loading="lazy" />
             </div>
         </div>
     </section>
