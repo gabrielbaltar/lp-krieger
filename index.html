@@ -157,10 +157,35 @@
             }
         }
         
-        /* Team Section - Reduce spacing between photo and text at 1030px and below */
+       /* Team Section - Ajuste da Sombra e Espaçamento */
+        #equipe .relative .bg-\[\#3e234b\] {
+            position: absolute;
+            top: 20px; /* Deslocamento para baixo */
+            left: 20px; /* Deslocamento para o lado */
+            width: calc(100% - 2rem);
+            max-width: 357px;
+            height: 360px;
+            z-index: 0;
+        }
+
+        #equipe .relative .absolute.top-0 {
+            position: relative; /* Faz a foto ficar sobre a sombra */
+            z-index: 10;
+        }
+
+        #equipe .relative .mt-4.sm\:mt-6 {
+            padding-top: 30px !important; /* Ajusta o texto após a foto */
+        }
+
         @media (max-width: 1030px) {
             #equipe .relative > div:last-child {
                 padding-top: 1rem !important;
+            }
+            #equipe .relative .bg-\[\#3e234b\] {
+                width: 280px;
+                height: 290px;
+                top: 15px;
+                left: 15px;
             }
         }
     </style>
@@ -182,14 +207,7 @@
                 <span class="text-[#ece9ed] text-[10px] sm:text-sm">(21) 98988-0976</span>
             </div>
         </div>
-        <div class="flex items-center gap-2 sm:gap-2.5">
-            <div class="bg-[#51395d] rounded-sm w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center">
-                <img src="assets/instagram.svg" alt="instagram" class="w-3.5 h-3.5 sm:w-4 sm:h-4">
-            </div>
-            <div class="bg-[#51395d] rounded-sm w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center">
-                <img src="assets/facebook-02.svg" alt="facebook" class="w-3.5 h-3.5 sm:w-4 sm:h-4">
-            </div>
-        </div>
+        
     </div>
 
     <!-- Navigation -->
@@ -239,7 +257,7 @@
                 <form action="https://formsubmit.co/jva.magalhaes@gmail.com" method="POST" class="space-y-3">
                     
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://seu-site.com/obrigado.html">
+                    <input type="hidden" name="_next" value="https://lp-krieger.vercel.app/">
 
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-[#141c25] mb-2">Nome completo</label>
@@ -389,7 +407,7 @@
                     <div>
                         <h3 class="text-[#363535] text-lg sm:text-xl font-semibold mb-2">Como trabalhamos</h3>
                         <p class="text-[#4e4d4d] text-sm sm:text-base lg:text-lg leading-relaxed">
-                            Iniciamos com analise de cenário e, após diagnosticado o problema, apresentação de plano de ação com prazo determinado para entrega dos serviços mediante acompanhamento responsável.
+                            Iniciamos com analise de cenário e, após diagnosticado o problema, apresentamos o plano de ação com prazo determinado para entrega dos serviços mediante acompanhamento responsável.
                         </p>
                     </div>
                 </div>
@@ -455,7 +473,7 @@
                     <div>
                         <h3 class="text-[#ece9ed] text-lg sm:text-xl lg:text-2xl font-medium mb-2 sm:mb-3">Acompanhamento</h3>
                         <p class="text-[#c5bdc9] text-xs sm:text-sm leading-relaxed">
-                            Agora é conosco, vamos acompanhar seu processo de perto e te manter informado (a).
+                            A partir da confirmação do cliente, damos todo o suporte necessário para o acompanhamento do processo.
                         </p>
                     </div>
                 </div>
@@ -487,11 +505,9 @@
                     <div class="mt-4 sm:mt-6 pt-[240px] sm:pt-[290px] lg:pt-0 lg:mt-6">
                         <h3 class="text-[#363535] text-xl sm:text-2xl lg:text-[32px] font-medium mb-4 sm:mb-6">Alcione Krieger</h3>
                         <p class="text-[#4e4d4d] text-xs sm:text-sm leading-relaxed">
-                            Analista Ambiental e Advogada atuante, excelentes qualificações; mais de vinte anos gerenciando pessoas e serviços; considerável experiência na advocacia contenciosa e preventiva. Um mestrado internacional em Business, e três pós-graduações (Direito Público, Constitucional, Penal e Processual Penal).
+                            Analista Ambiental e Advogada atuante, com mais de quinze anos gerenciando pessoas e serviços; ampla experiência na advocacia contenciosa e preventiva. Possui três pós-graduações (Direito Público, Constitucional, Penal e Processual Penal) e mestrado internacional em Business. Atua com foco em liderança, consultoria estratégica e gestão jurídico-administrativa.
                         </p>
-                        <p class="text-[#4e4d4d] text-xs sm:text-sm leading-relaxed mt-3 sm:mt-4">
-                            Profissional dotada de grande capacidade de liderança, organizada, competitiva, determinada, excelente apresentação pessoal, ótima dicção, redação e comunicação em geral, raciocínio rápido, estudiosa e grande proficiência na área jurídico administrativa e comercial.
-                        </p>
+                        
                     </div>
                 </div>
                 <!-- Team Member 2 -->
@@ -503,11 +519,8 @@
                     <div class="mt-4 sm:mt-6 pt-[240px] sm:pt-[290px] lg:pt-0 lg:mt-6">
                         <h3 class="text-[#363535] text-xl sm:text-2xl lg:text-[32px] font-medium mb-4 sm:mb-6">Lucas Coelho</h3>
                         <p class="text-[#4e4d4d] text-xs sm:text-sm leading-relaxed">
-                            Advogado atuante e dedicado à defesa dos direitos fundamentais e à busca por soluções jurídicas eficazes e humanizadas. Mestrando em Direito – Direitos Fundamentais e Novos Direitos, aprofundando sua pesquisa sobre a efetividade dos direitos humanos e sociais no cenário jurídico contemporâneo.
-                        </p>
-                        <p class="text-[#4e4d4d] text-xs sm:text-sm leading-relaxed mt-3 sm:mt-4">
-                            Possui ampla formação em diversas áreas do Direito, com sólida base teórica e prática adquirida por meio de cursos de pós-graduação e especializações, abrangendo: Direito e Processo Civil, Direito de Família e Sucessões, Direito do Consumidor, Direito Previdenciário, Direito Médico e da Saúde e Regularização Imobiliária.
-                        </p>
+                            Advogado e mestrando em Direitos Fundamentais e Novos Direitos, com sólida formação em Direito e Processo Civil, Direito de Família e Sucessões, Direito do Consumidor, Previdenciário, Direito Médico e Regularização Imobiliária. Atua na defesa dos direitos fundamentais e na construção de estratégias jurídicas eficazes; ocupa posição de vice-presidente em comissão da OAB.
+                        
                     </div>
                 </div>
                 <!-- Team Member 3 -->
@@ -519,11 +532,9 @@
                     <div class="mt-4 sm:mt-6 pt-[240px] sm:pt-[290px] lg:pt-0 lg:mt-6">
                         <h3 class="text-[#363535] text-xl sm:text-2xl lg:text-[32px] font-medium mb-4 sm:mb-6">Alan Batista</h3>
                         <p class="text-[#4e4d4d] text-xs sm:text-sm leading-relaxed">
-                            Formado em Direito pela Universidade Veiga de Almeida, o advogado integra a equipe do escritório Krieger Advocacia, atuando com dedicação e excelência nas diversas áreas do Direito. Possui experiência consolidada em atendimento ao público, elaboração e protocolo de peças processuais, organização documental e realização de diligências perante órgãos judiciais e administrativos.
+                            Formado em Direito pela Universidade Veiga de Almeida, integra a equipe Krieger Advocacia com atuação prática em atendimento ao público, elaboração e protocolo de peças processuais, organização documental e diligências em órgãos judiciais e administrativos. Atualmente pós-graduando em Prática Recursal, com foco em prática forense e acompanhamento processual.
                         </p>
-                        <p class="text-[#4e4d4d] text-xs sm:text-sm leading-relaxed mt-3 sm:mt-4">
-                            Atualmente, é pós-graduando em Prática Recursal e Impugnações de Decisões Judiciais em Instâncias Superiores, aprimorando continuamente sua formação para oferecer soluções jurídicas eficazes e de alto nível.
-                        </p>
+                        
                     </div>
                 </div>
             </div>
@@ -714,14 +725,7 @@
                     <a href="#" class="text-[#363535] text-xs sm:text-sm font-medium">Termos & Condições</a>
                     <a href="#" class="text-[#363535] text-xs sm:text-sm font-medium">Política de Privacidade</a>
                 </div>
-                <div class="flex items-center gap-2 sm:gap-3">
-                    <div class="bg-[#51395d] rounded-sm w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center">
-                        <img src="assets/instagram.svg" alt="Instagram" class="w-3.5 h-3.5 sm:w-4 sm:h-4">
-                    </div>
-                    <div class="bg-[#51395d] rounded-sm w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center">
-                        <img src="assets/facebook-02.svg" alt="Facebook" class="w-3.5 h-3.5 sm:w-4 sm:h-4">
-                    </div>
-                </div>
+              
             </div>
         </div>
     </footer>
