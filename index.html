@@ -24,15 +24,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 16px;
+        padding-top: 92px;
         }
         .consultoria-image img {
-        max-width: 860px;
+        max-width: 762px;
         width: 100%;
-        height: auto;
+        height: 428px;
+        object-fit: cover;
         display: block;
         border-radius: 12px;
         box-shadow: 0 4px 24px rgba(62,35,75,0.12);
+        }
+        
+        /* Areas Cards */
+        #areas .grid > div {
+            min-height: 400px;
+            width: 100%;
+        }
+        
+        @media (min-width: 1280px) {
+            #areas .grid {
+                grid-template-columns: repeat(3, 384px);
+                justify-content: center;
+            }
         }
         
         /* FAQ Accordion Animations */
@@ -466,7 +480,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Team Member 1 -->
                 <div class="relative">
-                    <div class="bg-[#3e234b] h-[250px] sm:h-[300px] lg:h-[370px] rounded-lg mb-4 sm:mb-6 mx-0 w-full max-w-[280px] sm:max-w-none"></div>
+                    <div class="bg-[#3e234b] h-[250px] sm:h-[300px] lg:h-[390px] rounded-lg mb-4 sm:mb-6 mx-0 w-full max-w-[280px] sm:max-w-none"></div>
                     <div class="absolute top-0 left-0 w-[calc(100%-2rem)] max-w-[260px] sm:max-w-none sm:w-[280px] md:w-full lg:w-[357px] h-[240px] sm:h-[290px] lg:h-[360px] rounded-lg overflow-hidden">
                         <img src="assets/4936da33070a4c605223cbff39bd2bbb88adaee5.png" alt="Alcione Krieger" class="w-full h-full object-cover">
                     </div>
@@ -482,7 +496,7 @@
                 </div>
                 <!-- Team Member 2 -->
                 <div class="relative">
-                    <div class="bg-[#3e234b] h-[250px] sm:h-[300px] lg:h-[370px] rounded-lg mb-4 sm:mb-6 mx-0 w-full max-w-[280px] sm:max-w-none"></div>
+                    <div class="bg-[#3e234b] h-[250px] sm:h-[300px] lg:h-[390px] rounded-lg mb-4 sm:mb-6 mx-0 w-full max-w-[280px] sm:max-w-none"></div>
                     <div class="absolute top-0 left-0 w-[calc(100%-2rem)] max-w-[260px] sm:max-w-none sm:w-[280px] md:w-full lg:w-[357px] h-[240px] sm:h-[290px] lg:h-[360px] rounded-xl overflow-hidden">
                         <img src="assets/d1719d479892f1af5ecef1b43011905c1e0d3f62.png" alt="Lucas Coelho" class="w-full h-full object-cover">
                     </div>
@@ -498,7 +512,7 @@
                 </div>
                 <!-- Team Member 3 -->
                 <div class="relative md:col-span-2 lg:col-span-1">
-                    <div class="bg-[#3e234b] h-[250px] sm:h-[300px] lg:h-[370px] rounded-lg mb-4 sm:mb-6 mx-0 w-full max-w-[280px] sm:max-w-none md:max-w-[280px] lg:max-w-none"></div>
+                    <div class="bg-[#3e234b] h-[250px] sm:h-[300px] lg:h-[390px] rounded-lg mb-4 sm:mb-6 mx-0 w-full max-w-[280px] sm:max-w-none md:max-w-[280px] lg:max-w-none"></div>
                     <div class="absolute top-0 left-0 w-[calc(100%-2rem)] max-w-[260px] sm:max-w-none sm:w-[280px] md:w-[280px] lg:w-[357px] h-[240px] sm:h-[290px] lg:h-[360px] rounded-xl overflow-hidden">
                         <img src="assets/9f7f907f2e2971745c050eca201799e92da814d7.png" alt="Alan Batista" class="w-full h-full object-cover">
                     </div>
