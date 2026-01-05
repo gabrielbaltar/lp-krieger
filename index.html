@@ -160,32 +160,70 @@
        /* Team Section - Ajuste da Sombra e Espaçamento */
         #equipe .relative .bg-\[\#3e234b\] {
             position: absolute;
-            top: 20px; /* Deslocamento para baixo */
-            left: 20px; /* Deslocamento para o lado */
-            width: calc(100% - 2rem);
+            top: 20px;
+            left: 20px;
+            width: 100%;
             max-width: 357px;
             height: 360px;
             z-index: 0;
+            border-radius: 8px;
         }
 
         #equipe .relative .absolute.top-0 {
-            position: relative; /* Faz a foto ficar sobre a sombra */
+            position: relative;
             z-index: 10;
         }
 
+        /* Ajuste do espaçamento do texto abaixo da foto no desktop */
         #equipe .relative .mt-4.sm\:mt-6 {
-            padding-top: 30px !important; /* Ajusta o texto após a foto */
+            padding-top: 20px !important;
         }
 
-        @media (max-width: 1030px) {
-            #equipe .relative > div:last-child {
-                padding-top: 1rem !important;
+        /* RESPONSIVIDADE PARA TELAS PEQUENAS (Mobile) */
+        @media (max-width: 640px) {
+            /* Torna o bloco da foto e sombra mais baixo */
+            #equipe .relative .bg-\[\#3e234b\] {
+                height: 220px; /* Reduzido de 250px/390px */
+                width: 220px;
+                top: 12px;    /* Sombra mais curta */
+                left: 12px;   /* Sombra mais curta */
+            }
+
+            #equipe .relative .absolute.top-0 {
+                height: 220px !important; /* Foto combinando com a sombra */
+                width: 220px !important;
+            }
+
+            /* Remove o padding excessivo que empurrava o texto para baixo */
+            #equipe .relative div[class*="pt-[240px]"],
+            #equipe .relative div[class*="pt-[290px]"] {
+                padding-top: 0 !important;
+                margin-top: 15px;
+            }
+            
+            /* Centraliza os elementos no mobile para um visual mais limpo */
+            #equipe .relative {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Ajuste intermediário (Tablets) */
+        @media (min-width: 641px) and (max-width: 1030px) {
+            #equipe .relative .bg-\[\#3e234b\],
+            #equipe .relative .absolute.top-0 {
+                width: 260px;
+                height: 280px;
             }
             #equipe .relative .bg-\[\#3e234b\] {
-                width: 280px;
-                height: 290px;
                 top: 15px;
                 left: 15px;
+            }
+            #equipe .relative div[class*="pt-"] {
+                padding-top: 10px !important;
             }
         }
     </style>
