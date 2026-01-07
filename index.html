@@ -334,8 +334,12 @@
     </section>
 
     <!-- Areas of Expertise Section -->
-    <section id="areas" class="py-12 sm:py-16 lg:py-24 bg-[#ece9ed]">
-        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="areas" class="py-12 sm:py-16 lg:py-24 bg-[#ece9ed] relative overflow-hidden">
+        <!-- Background Icon -->
+        <div class="absolute top-0 right-0 w-[457px] h-[446px] pointer-events-none z-0" style="transform: translateX(25%);">
+            <img src="assets/icon-background.svg" alt="" class="w-full h-full object-contain opacity-100">
+        </div>
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-8 sm:mb-12 lg:mb-16">
                 <span class="inline-block border border-[#8b7b93] rounded-full px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-xs font-medium text-[#363535] mb-2">
                     Áreas de atuação
